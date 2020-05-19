@@ -92,16 +92,20 @@ Parameters:
  * callback function getYears
  */
 
-const theWinners = getWinners(getFinals);
-const theYears = getYears(getFinals);
 
 
-function getWinnersByYear(theWinners, theYears ) {
-for (let i = 0; i < getFinals.length ; i++) {
-console.log( `In ${theYears[i]}, ${theWinners[i]} won the world cup! `) ;};
+
+function getWinnersByYear(getWinners, getYears ) {
+
+let winners = getWinners(getFinals);
+let years = getYears(getFinals);   
+
+return years.map((item, index) =>{
+    return `In ${item}, ${winners[index]} won the world cup! `;
+});
 };
 
-getWinnersByYear(theWinners, theYears);
+console.log(getWinnersByYear(getWinners, getYears));
 
 
 
@@ -127,6 +131,9 @@ console.log(getAverageGoals(fifaData));
 /* Stretch 1: Create a function called `getCountryWins` that takes the parameters `data` and `team initials` and returns the number of world cup wins that country has had. 
 Hint: Investigate your data to find "team initials"!
 Hint: use `.reduce` */
+
+
+
 
 function getCountryWins( data , teamInitials) {
 
