@@ -96,13 +96,12 @@ const theWinners = getWinners(getFinals);
 const theYears = getYears(getFinals);
 
 
-function getWinnersByYear(theWinners, theYears , getFinals) {
-
-for (let i = 0; i < getFinals.length ; i++){
+function getWinnersByYear(theWinners, theYears ) {
+for (let i = 0; i < getFinals.length ; i++) {
 console.log( `In ${theYears[i]}, ${theWinners[i]} won the world cup! `) ;};
 };
 
-console.log(getWinnersByYear(theWinners, theYears, getFinals));
+getWinnersByYear(theWinners, theYears);
 
 
 
@@ -129,7 +128,7 @@ console.log(getAverageGoals(fifaData));
 Hint: Investigate your data to find "team initials"!
 Hint: use `.reduce` */
 
-function getCountryWins(/* code here */) {
+function getCountryWins( data , teamInitials) {
 
 
     /* code here */	    /* code here */
