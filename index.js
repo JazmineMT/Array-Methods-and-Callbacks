@@ -16,12 +16,12 @@ const worldCupFinal2014 = fifaData.filter((game) =>{
     return game.Year === 2014 && game.Stage === 'Final'});
 
     
-
+console.log(worldCupFinal2014);
 console.log(worldCupFinal2014[0]["Home Team Name"]);
 console.log(worldCupFinal2014[0]["Away Team Name"]);
 console.log(worldCupFinal2014[0]["Home Team Goals"]);
 console.log(worldCupFinal2014[0]["Away Team Goals"]);
-console.log(worldCupFinal2014[0]["Winning Conditions"]);
+console.log(worldCupFinal2014[0]["Win conditions"]);
 
 
 
@@ -71,7 +71,7 @@ function getWinners(getFinals) {
     let winners = getFinals.map((game) =>{
     if( game["Home Team Goals"] >= game["Away Team Goals"]){
 
-        return `${game["Away Team Name"]}` 
+        return `${game["Home Team Name"]}` 
     };
     if( game["Home Team Goals"] <= game["Away Team Goals"]){
          return `${game["Away Team Name"]}`; 
